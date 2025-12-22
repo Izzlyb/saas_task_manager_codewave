@@ -1,0 +1,67 @@
+Build a SaaS Task Manager with Next.js 15 (2025) 🚀 FullStack Tutorial [Kinde, PostgreSQL, Prisma]
+
+CodeWave
+https://youtu.be/PzcEu_L8JoY
+
+E:\Full Stack Dev\2026_ijl_soft_dev\Development\CodeWave\saas_task_manager_codewave
+
+18,062 views  Feb 28, 2025  #Nextjs #SaaS #webdevelopment
+🔥 Build a FULL-STACK SaaS Project/Task Manager with React, Next.js 15! 🔥
+
+Welcome back, friends! In this step-by-step tutorial, we’re building a modern SaaS Project/Task Manager from scratch using the hottest tools in 2025:
+✅ Next.js 15 (App Router)
+✅ Postgres Database + Prisma ORM
+✅ Kinde for Auth & User Management
+✅ Tailwind CSS for sleek styling
+✅ Uploadthing for file uploads
+
+Try Kinde: https://kinde.com/r?kinde_ref=f4eab99...
+
+FULL SOURCE CODE: https://bit.ly/3F5m4qj
+
+
+🚀 What You’ll Learn:
+
+Create Workspaces, Projects, & Tasks (CRUD Operations)
+
+Master Next.js Server Actions for seamless backend logic
+
+Integrate secure user authentication with Kinde
+
+Upload files effortlessly using Uploadthing
+
+Style like a pro with Tailwind CSS
+
+Deploy a scalable SaaS-ready app
+
+💻 Code & Resources:
+• GitHub:  git@github.com:CodeWaveWithAsante/Task-Manager-Nextjs.git
+• Kinde Docs: https://docs.kinde.com/
+• Uploadthing: https://uploadthing.com/
+
+
+
+👍 Enjoyed the video?
+SMASH that LIKE button, SUBSCRIBE for more tutorials like this, and ring the bell 🔔 so you never miss an update!
+
+💬 Questions? Drop them in the comments—I’ll help you out!
+
+#Nextjs #SaaS #webdevelopment 
+
+⏰ Timestamps:
+00:00:00 - Intro & Demo
+00:10:25 - Project Setup
+00:17:15 - Kinde Auth Integration
+00:33:35 - Database Setup
+01:06:36 - Home Page
+01:24:06 - Onboarding Page
+02:05:37 - Create Workspace Page
+02:29:36 - Sidebar
+04:26:00 - Project Dashboard
+06:45:48 - Data Table
+07:22:37 -Kanban Board
+09:18:29 - Task Detail Page
+09:21:13 - File Uploads with Uploadthing
+10:06:27 - My Tasks Page
+10:13:38 - Workspace Settings Page
+10:55:15 - Outro
