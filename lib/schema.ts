@@ -13,5 +13,10 @@ export const userSchema = z.object ({
   image: z.string().optional()
 });
 
-
-
+export const workspaceSchema = z.object({
+  name: z
+    .string()
+    .min(2, "Name is required")
+    .max(100, "Maximum is 100 characters"),
+  description: z.string().optional(),
+});

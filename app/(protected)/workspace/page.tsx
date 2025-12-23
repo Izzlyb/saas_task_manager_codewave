@@ -1,6 +1,5 @@
 import { getUserWorkspaces } from '@/app/data/workspace/get-user-workspaces';
 import { redirect } from 'next/navigation';
-import { cloneElement } from 'react';
 
 const WorkspacePage = async () => {
   const { data } = await getUserWorkspaces();

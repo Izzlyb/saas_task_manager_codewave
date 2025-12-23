@@ -5,17 +5,36 @@ import { useForm } from 'react-hook-form';
 
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-
+import { industryTypesList, roleList } from "@/utils";
+import { countryList } from "@/utils/countriesList";
 import { userSchema } from '@/lib/schema';
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from './ui/form';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
-import { Input } from './ui/input';
-import { Button } from './ui/button';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
-import { countryList } from '@/utils/countriesList';
-import Image from 'next/image';
-import { industryTypesList, roleList } from '@/utils';
-import { Textarea } from './ui/textarea';
+import { Input } from '@/components/ui/input';
+import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { toast } from 'sonner';
+import { createUser } from '@/app/actions/user';
 
 type OnboardingFormProps = {
   name: string;
@@ -23,7 +42,7 @@ type OnboardingFormProps = {
   image?: string;
 };
 
-type UserDataType = z.infer<typeof userSchema>;
+export type UserDataType = z.infer<typeof userSchema>;
 
 const OnboardingForm = ({
   name, 
@@ -38,7 +57,7 @@ const OnboardingForm = ({
       defaultValues: {
         about: "",
         name: name || "",
-        email: email,
+        email: email || "",
         image: image || "",
         role: "",
         industryType: "",
@@ -46,7 +65,15 @@ const OnboardingForm = ({
   })
 
   const onSubmit = async (data: UserDataType) => {
-    console.log("submit form for processing...", data)
+    try {
+      setPending(true);
+      await createUser(data);
+    } catch (error) {
+      setPending(false);
+      toast.error("somthing went wrong on Create User. Try again.")
+      console.error(error);
+    }
+    console.log("🎉submit form for processing...")
   }
 
   return (
